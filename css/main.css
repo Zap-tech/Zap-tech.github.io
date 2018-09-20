@@ -1,0 +1,130 @@
+* {
+    background-color: #fdfdfd;
+    color: #1d1d1d;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#app {
+    width: 100%;
+    height: 100%;
+}
+
+.grid-home-root {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-rows: 3fr 3fr 2fr 1fr 50px;
+    grid-row-gap: 0.5em;
+    grid-template-areas:
+    "header"
+    "title"
+    "infobar"
+    "donations"
+    "footer";
+}
+
+.grid-home-header {
+    grid-area: header;
+    margin: 2em;
+}
+
+.grid-home-header > img {
+    width: 100%;
+}
+
+.grid-home-title {
+    grid-area: title;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.grid-home-title>.title {
+    line-height: 1em;
+    text-align: center;
+    font-size: 5em;
+    font-style: italic;
+    padding: 1em;
+}
+
+.grid-home-title>.inquiries {
+    line-height: 1.2em;
+    font-size: 2.5em;
+    text-align: center;
+    padding: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.grid-home-infobar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: infobar;
+}
+
+.infobar-listing {
+    display: flex;
+    
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.infobar-spacer {
+    height: 3.5em;
+}
+
+.infobar-item {
+    height: 1.5em;
+    padding-left: 0.5em;
+    font-size: 3.5em;
+    padding-top: 0.5em;
+}
+
+.grid-home-donations {
+    grid-area: donations;
+    display: flex;
+    justify-content: center;
+}
+
+.donation-listing {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.donation-item {
+    padding: 0.5em;
+}
+
+.donation-item>.title {
+    font-weight: bold;
+    padding: 0.5em;
+}
+
+.donation-item>.account {
+    padding: 0.5em;
+    font-family: monospace;
+}
+
+.grid-home-footer {
+    grid-area: footer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-home-footer>span {
+    color: #666;
+}
